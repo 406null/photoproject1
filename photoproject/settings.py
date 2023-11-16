@@ -38,9 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # photoアプリを追加する
     'photo.apps.PhotoConfig',
-    # accountsアプリを追加する
     'accounts.apps.AccountsConfig',
 ]
 
@@ -108,10 +106,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-# 使用言語を日本語に設定
 LANGUAGE_CODE = 'ja'
 
-# タイムゾーンを設定
 TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
@@ -124,10 +120,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# staticフォルダーのフルパスを設定
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-# Userモデルの代わりにCustomUserモデルを使用する
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # Default primary key field type
@@ -135,17 +129,12 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# メールサーバーへの接続設定
-# Gmailのアドレス、Gmailのアプリ用パスワードは
-# お使いのものを入力してください
-DEFAULT_FROM_EMAIL = 'toshiyakinjo@gmail.com'  # メールの送信元のアドレスを入力
-EMAIL_HOST = 'smtp.gmail.com'            # GmailのSMPTサーバー　　　
-EMAIL_PORT = 587                         # SMPTサーバーのポート番号
-EMAIL_HOST_USER = 'toshiyakinjo@gmail.com'     # Gmailのアドレスを入力
-EMAIL_HOST_PASSWORD = 'bbwwhatohmcgbguy' # Gmailのアプリ用パスワードを入力
-EMAIL_USE_TLS = True # SMTP サーバと通信する際に TLS (セキュア) 接続を使う
+DEFAULT_FROM_EMAIL = 'savewidejoyer@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587 
+EMAIL_HOST_USER = 'savewidejoyer@gmail.com' 
+EMAIL_HOST_PASSWORD = 'jpfj qxkb xrdw cnmr'
+EMAIL_USE_TLS = True 
 
-# mediaフォルダーの場所(BASE_DIR以下のmedia)を登録
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# mediaのURLを登録
 MEDIA_URL = '/media/'
